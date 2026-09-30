@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação Institucional | Vianorte Representações</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0b132b',
+                        orange: '#f46524',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Header / Menu (Com link de volta para a Home) -->
+    <header class="bg-navy shadow-md fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html">
+                        <img src="image.png" alt="Vianorte Representações" class="h-16 w-auto object-contain">
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-white hover:text-orange transition-colors font-medium"><i class="fas fa-arrow-left mr-2"></i> Voltar ao Início</a>
+                </nav>
+                <div class="hidden md:flex">
+                    <a href="https://wa.me/5592988093401" target="_blank" class="bg-orange hover:bg-orange/90 text-white px-6 py-2 rounded-full font-bold transition-all shadow-lg flex items-center">
+                        <i class="fab fa-whatsapp text-xl mr-2"></i> Fale Conosco
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section Institucional -->
+    <section class="relative bg-navy pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight max-w-4xl mx-auto">
+                Conectando marcas, negócios e <span class="text-orange">oportunidades na região Norte</span>
+            </h1>
+        </div>
+        <!-- Efeito de fundo -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <div class="absolute transform rotate-45 -right-1/4 -top-1/4 w-1/2 h-full bg-orange blur-3xl rounded-full"></div>
+        </div>
+    </section>
+
+    <!-- Apresentação & Nossa Atuação -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Coluna de Texto -->
+                <div>
+                    <div class="mb-10">
+                        <h2 class="text-3xl font-extrabold text-navy mb-6 flex items-center">
+                            <i class="fas fa-handshake text-orange mr-4"></i> Nossa História
+                        </h2>
+                        <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+                            Há mais de 16 anos, a Via Norte Representações atua no mercado do Amazonas e de Roraima, construindo conexões sólidas entre fabricantes, distribuidores e clientes.
+                        </p>
+                        <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+                            Nossa experiência no mercado nos permite compreender as necessidades da região e oferecer às empresas parceiras uma representação comercial próxima, estratégica e comprometida com resultados.
+                        </p>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Trabalhamos para fortalecer a presença das marcas que representamos, aproximando produtos e soluções dos principais canais de comercialização e contribuindo para o crescimento sustentável de nossos parceiros.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-3xl font-extrabold text-navy mb-6 flex items-center">
+                            <i class="fas fa-briefcase text-orange mr-4"></i> Nossa Atuação
+                        </h2>
+                        <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+                            Com conhecimento do mercado regional e relacionamento construído ao longo dos anos, atuamos na representação e desenvolvimento comercial de produtos, com destaque para o segmento automotivo e seus diversos componentes.
+                        </p>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Nosso trabalho vai além da apresentação de produtos: buscamos entender cada mercado, identificar oportunidades e construir relacionamentos duradouros com clientes e parceiros.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Coluna Imagem/Logo -->
+                <div class="flex justify-center lg:justify-end">
+                    <div class="bg-gray-50 p-12 rounded-3xl shadow-xl border border-gray-100 max-w-md w-full relative">
+                        <div class="absolute -top-6 -left-6 w-24 h-24 bg-orange/10 rounded-full blur-xl"></div>
+                        <img src="image.png" alt="Logo Via Norte" class="w-full h-auto object-contain drop-shadow-2xl relative z-10">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiência que gera conexão -->
+    <section class="py-20 bg-gray-50 border-y border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-sm font-bold text-orange uppercase tracking-widest mb-3">Nosso Diferencial</h2>
+            <h3 class="text-3xl md:text-4xl font-extrabold text-navy mb-8">Experiência que gera conexão</h3>
+            <p class="text-xl text-gray-600 mb-6 leading-relaxed">
+                Acreditamos que uma boa representação comercial é construída com <strong class="text-navy">confiança, conhecimento de mercado, relacionamento e compromisso</strong>.
+            </p>
+            <p class="text-xl text-gray-600 leading-relaxed">
+                Por isso, a Via Norte trabalha diariamente para ser uma extensão das empresas que representa, oferecendo presença comercial na região e contribuindo para que grandes marcas alcancem novas oportunidades no mercado do Norte do Brasil.
+            </p>
+        </div>
+    </section>
+
+    <!-- Missão, Visão e Valores (Cards) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Missão -->
+                <div class="bg-navy p-10 rounded-2xl shadow-lg text-white transform hover:-translate-y-2 transition-transform">
+                    <div class="w-16 h-16 bg-orange rounded-full flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fas fa-bullseye text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Nossa Missão</h3>
+                    <p class="text-gray-300 leading-relaxed text-lg">
+                        Conectar marcas e mercados, desenvolvendo negócios por meio de relacionamento, conhecimento regional e excelência na representação comercial.
+                    </p>
+                </div>
+
+                <!-- Visão -->
+                <div class="bg-white border border-gray-200 p-10 rounded-2xl shadow-lg text-navy transform hover:-translate-y-2 transition-transform">
+                    <div class="w-16 h-16 bg-navy rounded-full flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fas fa-eye text-3xl text-orange"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Nossa Visão</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        Ser uma referência em representação comercial na região Norte, reconhecida pela credibilidade, qualidade do atendimento e pela construção de parcerias de longo prazo.
+                    </p>
+                </div>
+
+                <!-- Valores -->
+                <div class="bg-orange p-10 rounded-2xl shadow-lg text-white transform hover:-translate-y-2 transition-transform">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fas fa-star text-3xl text-navy"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Nossos Valores</h3>
+                    <ul class="space-y-3 text-orange-100 font-medium text-lg">
+                        <li class="flex items-center"><i class="fas fa-check-circle mr-3"></i> Compromisso</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle mr-3"></i> Credibilidade</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle mr-3"></i> Relacionamento</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle mr-3"></i> Ética</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle mr-3"></i> Conhecimento de mercado</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle mr-3"></i> Resultado</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Slogan Final / Call to Action -->
+    <section class="py-24 bg-navy relative overflow-hidden text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
+                Via Norte Representações
+            </h2>
+            <p class="text-2xl text-orange font-medium mb-2">Sua marca mais perto do mercado.</p>
+            <p class="text-2xl text-gray-300 font-light mb-12">Seu negócio mais perto de novas oportunidades.</p>
+            
+            <a href="https://wa.me/5592988093401" target="_blank" class="inline-flex items-center justify-center px-10 py-5 border border-transparent text-xl font-bold rounded-full text-white bg-orange hover:bg-orange/90 transition-all shadow-[0_0_20px_rgba(244,101,36,0.4)]">
+                Seja um Parceiro Via Norte <i class="fab fa-whatsapp ml-3 text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#070b1a] text-gray-400 py-10 border-t border-gray-800 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <img src="image.png" alt="Vianorte Representações" class="h-12 w-auto mx-auto mb-6 opacity-80">
+            <p class="mb-4">Atendimento no Amazonas e Roraima • vendas@vianorterepres.com.br</p>
+            <p>&copy; 2026 Via Norte Representações. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
