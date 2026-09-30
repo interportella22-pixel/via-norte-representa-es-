@@ -45,9 +45,14 @@
     </script>
     <style>
         /* Custom Styles for aesthetic enhancements */
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
         .glass-header {
             background-color: rgba(11, 27, 54, 0.95);
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
         .hero-pattern {
             background-image: linear-gradient(to right bottom, rgba(11, 27, 54, 0.92), rgba(11, 27, 54, 0.98)), url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
@@ -59,7 +64,7 @@
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
 
     <!-- HEADER FIXO -->
     <header class="fixed w-full top-0 z-50 glass-header border-b border-white/10 transition-all duration-300">
@@ -68,7 +73,6 @@
                 <!-- Logo Area -->
                 <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
                     <div class="w-12 h-12 rounded-full border-2 border-brandOrange flex items-center justify-center bg-white shadow-glow">
-                        <!-- Ícone representando a logo (aperto de mãos/negócios) -->
                         <i class="fa-solid fa-handshake text-brandBlue text-xl"></i>
                     </div>
                     <div class="flex flex-col">
@@ -80,8 +84,8 @@
                 <!-- Desktop Menu -->
                 <nav class="hidden md:flex space-x-8 items-center">
                     <a href="#home" class="text-gray-300 hover:text-brandOrange transition-colors font-medium text-sm uppercase tracking-wide">Início</a>
-                    <a href="#catalogos" class="text-gray-300 hover:text-brandOrange transition-colors font-medium text-sm uppercase tracking-wide">Catálogos</a>
                     <a href="#sobre" class="text-gray-300 hover:text-brandOrange transition-colors font-medium text-sm uppercase tracking-wide">Sobre</a>
+                    <a href="#catalogos" class="text-gray-300 hover:text-brandOrange transition-colors font-medium text-sm uppercase tracking-wide">Catálogos</a>
                     <a href="#contato" class="text-gray-300 hover:text-brandOrange transition-colors font-medium text-sm uppercase tracking-wide">Contato</a>
                     <a href="https://wa.me/5592988093401?text=Olá,%20gostaria%20de%20falar%20com%20um%20consultor%20da%20Via%20Norte!" target="_blank" class="bg-brandOrange hover:bg-brandOrange-hover text-white px-5 py-2 rounded-full font-semibold transition-all shadow-lg text-sm flex items-center gap-2">
                         <i class="fa-brands fa-whatsapp text-lg"></i> Fale Conosco
@@ -98,13 +102,13 @@
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-brandBlue-dark border-t border-gray-700">
-            <div class="px-4 pt-2 pb-4 space-y-1 shadow-xl">
+        <div id="mobile-menu" class="hidden md:hidden bg-brandBlue-dark border-t border-gray-700 absolute w-full left-0 shadow-2xl">
+            <div class="px-4 pt-2 pb-4 space-y-1">
                 <a href="#home" class="block px-3 py-3 text-white hover:bg-white/5 rounded-md font-medium border-b border-white/5">Início</a>
-                <a href="#catalogos" class="block px-3 py-3 text-white hover:bg-white/5 rounded-md font-medium border-b border-white/5">Catálogos</a>
                 <a href="#sobre" class="block px-3 py-3 text-white hover:bg-white/5 rounded-md font-medium border-b border-white/5">Sobre Nós</a>
+                <a href="#catalogos" class="block px-3 py-3 text-white hover:bg-white/5 rounded-md font-medium border-b border-white/5">Catálogos</a>
                 <a href="#contato" class="block px-3 py-3 text-white hover:bg-white/5 rounded-md font-medium mb-3">Contato</a>
-                <a href="https://wa.me/5592988093401?text=Olá,%20gostaria%20de%20falar%20com%20um%20consultor%20da%20Via%20Norte!" target="_blank" class="w-full flex items-center justify-center gap-2 bg-brandOrange text-white px-4 py-3 rounded-md font-bold">
+                <a href="https://wa.me/5592988093401?text=Olá,%20gostaria%20de%20falar%20com%20um%20consultor%20da%20Via%20Norte!" target="_blank" class="w-full flex items-center justify-center gap-2 bg-brandOrange text-white px-4 py-3 rounded-md font-bold shadow-md mt-2">
                     <i class="fa-brands fa-whatsapp text-lg"></i> (92) 98809-3401
                 </a>
             </div>
@@ -112,23 +116,23 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section id="home" class="hero-pattern pt-32 pb-20 md:pt-48 md:pb-32 flex items-center justify-center min-h-[80vh]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-6">
+    <section id="home" class="hero-pattern pt-32 pb-20 md:pt-48 md:pb-32 flex items-center justify-center min-h-[85vh] mt-10 md:mt-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-6 animate-pulse">
                 <i class="fa-solid fa-star text-brandOrange text-sm"></i>
                 <span class="text-white text-sm font-medium tracking-wide">Excelência em Peças Automotivas</span>
             </div>
             
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight drop-shadow-xl">
                 Confiança que <br class="hidden md:block"/>
                 <span class="text-brandOrange relative inline-block">
                     movimenta negócios
                     <!-- Decorative underline -->
-                    <svg class="absolute w-full h-3 -bottom-1 left-0 text-brandOrange opacity-50" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.00015 6.89998C69.0436 -1.25878 136.635 -1.22915 203.351 6.89998" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg class="absolute w-full h-3 -bottom-2 left-0 text-brandOrange opacity-60" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.00015 6.89998C69.0436 -1.25878 136.635 -1.22915 203.351 6.89998" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </span>
             </h1>
             
-            <p class="mt-4 max-w-2xl text-lg md:text-xl text-gray-300 mx-auto mb-10">
+            <p class="mt-6 max-w-2xl text-lg md:text-xl text-gray-200 mx-auto mb-10 drop-shadow-md">
                 A Vianorte Representações conecta você às melhores marcas do mercado automotivo. Agilidade, qualidade e parceria estratégica para alavancar suas vendas.
             </p>
             
@@ -137,118 +141,48 @@
                     <i class="fa-solid fa-book-open"></i> Ver Catálogos
                 </a>
                 <a href="https://wa.me/5592988093401?text=Olá,%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Via%20Norte!" target="_blank" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-brandBlue font-bold py-4 px-8 rounded-full transition-all duration-300 flex items-center justify-center gap-2 text-lg">
-                    <i class="fa-brands fa-whatsapp text-xl"></i> Falar no WhatsApp
+                    <i class="fa-brands fa-whatsapp text-xl"></i> (92) 98809-3401
                 </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CATÁLOGOS SECTION -->
-    <section id="catalogos" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-brandOrange font-bold tracking-widest uppercase text-sm mb-2">Nossos Produtos</h2>
-                <h3 class="text-3xl md:text-4xl font-extrabold text-brandBlue mb-4">Catálogos Disponíveis</h3>
-                <div class="w-24 h-1 bg-brandOrange mx-auto rounded-full"></div>
-                <p class="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">
-                    Selecione a linha de produtos abaixo para solicitar o catálogo completo diretamente com nossa equipe de vendas.
-                </p>
-            </div>
-
-            <!-- Grid de Categorias (Baseado nos ícones da logo fornecida) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-                
-                <!-- Card 1: Filtros -->
-                <a href="https://wa.me/5592988093401?text=Olá,%20gostaria%20de%20receber%20o%20catálogo%20de%20Filtros." target="_blank" class="card-zoom group bg-white border border-gray-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
-                    <div class="w-20 h-20 rounded-full border-2 border-brandOrange flex items-center justify-center mb-4 bg-orange-50 group-hover:bg-brandOrange transition-colors duration-300">
-                        <i class="fa-solid fa-filter text-3xl text-brandBlue group-hover:text-white card-icon transition-transform duration-300"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-brandBlue mb-2">Filtros</h4>
-                    <p class="text-sm text-gray-500 mb-4">Ar, óleo, combustível e cabine.</p>
-                    <span class="mt-auto text-brandOrange font-semibold text-sm group-hover:underline flex items-center gap-1">
-                        Solicitar <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </span>
-                </a>
-
-                <!-- Card 2: Óleos e Lubrificantes -->
-                <a href="https://wa.me/5592988093401?text=Olá,%20gostaria%20de%20receber%20o%20catálogo%20de%20Óleos%20e%20Lubrificantes." target="_blank" class="card-zoom group bg-white border border-gray-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
-                    <div class="w-20 h-20 rounded-full border-2 border-brandOrange flex items-center justify-center mb-4 bg-orange-50 group-hover:bg-brandOrange transition-colors duration-300">
-                        <i class="fa-solid fa-oil-can text-3xl text-brandBlue group-hover:text-white card-icon transition-transform duration-300"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-brandBlue mb-2">Lubrificantes</h4>
-                    <p class="text-sm text-gray-500 mb-4">Óleos minerais, sintéticos e fluidos.</p>
-                    <span class="mt-auto text-brandOrange font-semibold text-sm group-hover:underline flex items-center gap-1">
-                        Solicitar <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </span>
-                </a>
-
-                <!-- Card 3: Freios -->
-                <a href="https://wa.me/5592988093401?text=Olá,%20gostaria%20de%20receber%20o%20catálogo%20da%20linha%20de%20Freios." target="_blank" class="card-zoom group bg-white border border-gray-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
-                    <div class="w-20 h-20 rounded-full border-2 border-brandOrange flex items-center justify-center mb-4 bg-orange-50 group-hover:bg-brandOrange transition-colors duration-300">
-                        <i class="fa-solid fa-circle-notch text-3xl text-brandBlue group-hover:text-white card-icon transition-transform duration-300"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-brandBlue mb-2">Freios</h4>
-                    <p class="text-sm text-gray-500 mb-4">Pastilhas, discos e fluidos de freio.</p>
-                    <span class="mt-auto text-brandOrange font-semibold text-sm group-hover:underline flex items-center gap-1">
-                        Solicitar <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </span>
-                </a>
-
-                <!-- Card 4: Peças de Motor -->
-                <a href="https://wa.me/5592988093401?text=Olá,%20gostaria%20de%20receber%20o%20catálogo%20de%20Peças%20para%20Motor." target="_blank" class="card-zoom group bg-white border border-gray-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
-                    <div class="w-20 h-20 rounded-full border-2 border-brandOrange flex items-center justify-center mb-4 bg-orange-50 group-hover:bg-brandOrange transition-colors duration-300">
-                        <i class="fa-solid fa-cogs text-3xl text-brandBlue group-hover:text-white card-icon transition-transform duration-300"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-brandBlue mb-2">Motor</h4>
-                    <p class="text-sm text-gray-500 mb-4">Componentes internos e periféricos.</p>
-                    <span class="mt-auto text-brandOrange font-semibold text-sm group-hover:underline flex items-center gap-1">
-                        Solicitar <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </span>
-                </a>
-
-                <!-- Card 5: Escapamentos / Suspensão -->
-                <a href="https://wa.me/5592988093401?text=Olá,%20gostaria%20de%20receber%20o%20catálogo%20Geral%20de%20Peças." target="_blank" class="card-zoom group bg-white border border-gray-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
-                    <div class="w-20 h-20 rounded-full border-2 border-brandOrange flex items-center justify-center mb-4 bg-orange-50 group-hover:bg-brandOrange transition-colors duration-300">
-                        <i class="fa-solid fa-truck-fast text-3xl text-brandBlue group-hover:text-white card-icon transition-transform duration-300"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-brandBlue mb-2">Diversos</h4>
-                    <p class="text-sm text-gray-500 mb-4">Suspensão, escapamentos e acessórios.</p>
-                    <span class="mt-auto text-brandOrange font-semibold text-sm group-hover:underline flex items-center gap-1">
-                        Solicitar <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </span>
-                </a>
-
             </div>
         </div>
     </section>
 
     <!-- SOBRE NÓS SECTION -->
-    <section id="sobre" class="py-20 bg-gray-100">
+    <section id="sobre" class="py-20 md:py-32 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 w-full">
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Peças Automotivas" class="rounded-2xl shadow-2xl z-10 relative">
+                        <!-- Placeholder com imagem temática via Unsplash -->
+                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Peças Automotivas em Estoque" class="rounded-2xl shadow-2xl z-10 relative w-full h-auto object-cover">
                         <div class="absolute -bottom-6 -right-6 w-full h-full border-4 border-brandOrange rounded-2xl z-0 hidden md:block"></div>
                     </div>
                 </div>
-                <div class="md:w-1/2">
+                <div class="lg:w-1/2 w-full">
                     <h2 class="text-brandOrange font-bold tracking-widest uppercase text-sm mb-2">Nossa História</h2>
-                    <h3 class="text-3xl md:text-4xl font-extrabold text-brandBlue mb-6">A ponte entre a indústria e o seu negócio</h3>
+                    <h3 class="text-3xl md:text-5xl font-extrabold text-brandBlue mb-6 leading-tight">A ponte entre a indústria e o seu negócio</h3>
                     <p class="text-gray-600 mb-6 text-lg leading-relaxed">
-                        A <strong class="text-brandBlue">Via Norte Representações</strong> nasceu com o propósito de facilitar o acesso de lojistas e distribuidores às melhores marcas de peças automotivas do mercado.
+                        A <strong class="text-brandBlue">Vianorte Representações</strong> nasceu com o propósito de facilitar o acesso de lojistas e distribuidores às melhores marcas de peças automotivas do mercado.
                     </p>
                     <p class="text-gray-600 mb-8 text-lg leading-relaxed">
                         Trabalhamos com transparência, agilidade e um portfólio completo que garante a satisfação do cliente final. Nossa lema é simples: <em>"Confiança que movimenta negócios"</em>.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-check-circle text-brandOrange text-xl"></i>
-                            <span class="text-gray-700 font-semibold">Atendimento Rápido</span>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3 bg-gray-50 p-4 rounded-xl border border-gray-100">
+                            <i class="fa-solid fa-bolt text-brandOrange text-2xl"></i>
+                            <span class="text-brandBlue font-bold">Atendimento Ágil</span>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-check-circle text-brandOrange text-xl"></i>
-                            <span class="text-gray-700 font-semibold">Marcas de Qualidade</span>
+                        <div class="flex items-center gap-3 bg-gray-50 p-4 rounded-xl border border-gray-100">
+                            <i class="fa-solid fa-shield-halved text-brandOrange text-2xl"></i>
+                            <span class="text-brandBlue font-bold">Marcas Oficiais</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-gray-50 p-4 rounded-xl border border-gray-100">
+                            <i class="fa-solid fa-truck-fast text-brandOrange text-2xl"></i>
+                            <span class="text-brandBlue font-bold">Logística Eficiente</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-gray-50 p-4 rounded-xl border border-gray-100">
+                            <i class="fa-solid fa-handshake-angle text-brandOrange text-2xl"></i>
+                            <span class="text-brandBlue font-bold">Suporte Dedicado</span>
                         </div>
                     </div>
                 </div>
@@ -256,66 +190,198 @@
         </div>
     </section>
 
-    <!-- CONTATO SECTION -->
-    <section id="contato" class="py-20 bg-brandBlue text-white relative overflow-hidden">
-        <!-- Decoration -->
-        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-brandBlue-light rounded-full opacity-50 blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-brandOrange-hover rounded-full opacity-20 blur-3xl"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-12">
-                <h2 class="text-brandOrange font-bold tracking-widest uppercase text-sm mb-2">Fale Conosco</h2>
-                <h3 class="text-3xl md:text-4xl font-extrabold mb-4">Pronto para fechar negócio?</h3>
-                <p class="text-gray-300 max-w-2xl mx-auto">
-                    Nossa equipe está pronta para tirar suas dúvidas e enviar nossos catálogos completos com tabela de preços atualizada.
+    <!-- CATÁLOGOS SECTION -->
+    <section id="catalogos" class="py-20 md:py-32 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-brandOrange font-bold tracking-widest uppercase text-sm mb-2">Nossos Produtos</h2>
+                <h3 class="text-3xl md:text-5xl font-extrabold text-brandBlue mb-4">Catálogos Disponíveis</h3>
+                <div class="w-24 h-1.5 bg-brandOrange mx-auto rounded-full"></div>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">
+                    Selecione a linha de produtos abaixo para solicitar o catálogo completo em PDF e a tabela de preços atualizada diretamente pelo nosso WhatsApp.
                 </p>
             </div>
 
-            <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+            <!-- Grid de Categorias -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                
+                <!-- Card 1: Filtros -->
+                <a href="https://wa.me/5592988093401?text=Olá,%20gostaria%20de%20receber%20o%20catálogo%20de%20Filtros." target="_blank" class="card-zoom group bg-white border border-gray-100 p-8 rounded-2xl shadow-md hover:shadow-xl hover:border-brandOrange/30 transition-all duration-300 flex flex-col items-center text-center">
+                    <div class="w-20 h-20 rounded-full border-2 border-brandOrange flex items-center justify-center mb-5 bg-orange-50 group-hover:bg-brandOrange transition-colors duration-300 shadow-sm">
+                        <i class="fa-solid fa-filter text-3xl text-brandBlue group-hover:text-white card-icon transition-transform duration-300"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brandBlue mb-2">Filtros</h4>
+                    <p class="text-sm text-gray-500 mb-6 flex-grow">Filtros de ar, óleo, combustível e cabine.</p>
+                    <span class="w-full bg-brandBlue text-white py-2 rounded-lg text-sm font-semibold group-hover:bg-brandOrange transition-colors flex justify-center items-center gap-2">
+                        Solicitar <i class="fa-brands fa-whatsapp"></i>
+                    </span>
+                </a>
+
+                <!-- Card 2: Óleos e Lubrificantes -->
+                <a href="https://wa.me/5592988093401?text=Olá,%20gostaria%20de%20receber%20o%20catálogo%20de%20Óleos%20e%20Lubrificantes." target="_blank" class="card-zoom group bg-white border border-gray-100 p-8 rounded-2xl shadow-md hover:shadow-xl hover:border-brandOrange/30 transition-all duration-300 flex flex-col items-center text-center">
+                    <div class="w-20 h-20 rounded-full border-2 border-brandOrange flex items-center justify-center mb-5 bg-orange-50 group-hover:bg-brandOrange transition-colors duration-300 shadow-sm">
+                        <i class="fa-solid fa-oil-can text-3xl text-brandBlue group-hover:text-white card-icon transition-transform duration-300"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brandBlue mb-2">Lubrificantes</h4>
+                    <p class="text-sm text-gray-500 mb-6 flex-grow">Óleos minerais, sintéticos e fluidos diversos.</p>
+                    <span class="w-full bg-brandBlue text-white py-2 rounded-lg text-sm font-semibold group-hover:bg-brandOrange transition-colors flex justify-center items-center gap-2">
+                        Solicitar <i class="fa-brands fa-whatsapp"></i>
+                    </span>
+                </a>
+
+                <!-- Card 3: Freios -->
+                <a href="https://wa.me/5592988093401?text=Olá,%20gostaria%20de%20receber%20o%20catálogo%20da%20linha%20de%20Freios." target="_blank" class="card-zoom group bg-white border border-gray-100 p-8 rounded-2xl shadow-md hover:shadow-xl hover:border-brandOrange/30 transition-all duration-300 flex flex-col items-center text-center">
+                    <div class="w-20 h-20 rounded-full border-2 border-brandOrange flex items-center justify-center mb-5 bg-orange-50 group-hover:bg-brandOrange transition-colors duration-300 shadow-sm">
+                        <i class="fa-solid fa-circle-notch text-3xl text-brandBlue group-hover:text-white card-icon transition-transform duration-300"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brandBlue mb-2">Freios</h4>
+                    <p class="text-sm text-gray-500 mb-6 flex-grow">Pastilhas, discos, lonas e fluidos de freio.</p>
+                    <span class="w-full bg-brandBlue text-white py-2 rounded-lg text-sm font-semibold group-hover:bg-brandOrange transition-colors flex justify-center items-center gap-2">
+                        Solicitar <i class="fa-brands fa-whatsapp"></i>
+                    </span>
+                </a>
+
+                <!-- Card 4: Peças de Motor -->
+                <a href="https://wa.me/5592988093401?text=Olá,%20gostaria%20de%20receber%20o%20catálogo%20de%20Peças%20para%20Motor." target="_blank" class="card-zoom group bg-white border border-gray-100 p-8 rounded-2xl shadow-md hover:shadow-xl hover:border-brandOrange/30 transition-all duration-300 flex flex-col items-center text-center">
+                    <div class="w-20 h-20 rounded-full border-2 border-brandOrange flex items-center justify-center mb-5 bg-orange-50 group-hover:bg-brandOrange transition-colors duration-300 shadow-sm">
+                        <i class="fa-solid fa-cogs text-3xl text-brandBlue group-hover:text-white card-icon transition-transform duration-300"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brandBlue mb-2">Motor</h4>
+                    <p class="text-sm text-gray-500 mb-6 flex-grow">Componentes internos, correias e periféricos.</p>
+                    <span class="w-full bg-brandBlue text-white py-2 rounded-lg text-sm font-semibold group-hover:bg-brandOrange transition-colors flex justify-center items-center gap-2">
+                        Solicitar <i class="fa-brands fa-whatsapp"></i>
+                    </span>
+                </a>
+
+                <!-- Card 5: Diversos -->
+                <a href="https://wa.me/5592988093401?text=Olá,%20gostaria%20de%20receber%20o%20catálogo%20Geral%20de%20Peças." target="_blank" class="card-zoom group bg-white border border-gray-100 p-8 rounded-2xl shadow-md hover:shadow-xl hover:border-brandOrange/30 transition-all duration-300 flex flex-col items-center text-center">
+                    <div class="w-20 h-20 rounded-full border-2 border-brandOrange flex items-center justify-center mb-5 bg-orange-50 group-hover:bg-brandOrange transition-colors duration-300 shadow-sm">
+                        <i class="fa-solid fa-truck-fast text-3xl text-brandBlue group-hover:text-white card-icon transition-transform duration-300"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brandBlue mb-2">Diversos</h4>
+                    <p class="text-sm text-gray-500 mb-6 flex-grow">Suspensão, escapamentos e acessórios gerais.</p>
+                    <span class="w-full bg-brandBlue text-white py-2 rounded-lg text-sm font-semibold group-hover:bg-brandOrange transition-colors flex justify-center items-center gap-2">
+                        Solicitar <i class="fa-brands fa-whatsapp"></i>
+                    </span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO SECTION -->
+    <section id="contato" class="py-20 md:py-32 bg-brandBlue text-white relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 -mt-32 -mr-32 w-96 h-96 bg-brandBlue-light rounded-full opacity-50 blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -mb-32 -ml-32 w-96 h-96 bg-brandOrange-hover rounded-full opacity-20 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-brandOrange font-bold tracking-widest uppercase text-sm mb-2">Fale Conosco</h2>
+                <h3 class="text-3xl md:text-5xl font-extrabold mb-4">Pronto para fechar negócio?</h3>
+                <p class="text-gray-300 max-w-2xl mx-auto text-lg">
+                    Entre em contato pelos nossos canais oficiais. Nossa equipe comercial está preparada para oferecer as melhores condições para a sua loja.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                 <!-- WhatsApp Contact -->
-                <a href="https://wa.me/5592988093401?text=Olá,%20acessei%20o%20site%20da%20Via%20Norte%20e%20gostaria%20de%20informações." target="_blank" class="bg-white/10 hover:bg-white/20 border border-white/20 p-6 rounded-2xl flex flex-col items-center min-w-[250px] transition-all duration-300">
-                    <i class="fa-brands fa-whatsapp text-4xl text-brandOrange mb-4"></i>
-                    <span class="text-sm text-gray-300 uppercase tracking-wider mb-1">WhatsApp</span>
-                    <span class="text-xl font-bold">(92) 98809-3401</span>
+                <a href="https://wa.me/5592988093401?text=Olá,%20acessei%20o%20site%20da%20Via%20Norte%20e%20gostaria%20de%20informações." target="_blank" class="bg-white/5 hover:bg-white/10 border border-white/10 hover:border-brandOrange/50 p-8 rounded-2xl flex flex-col items-center text-center transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-brandOrange rounded-full flex items-center justify-center mb-6 shadow-glow">
+                        <i class="fa-brands fa-whatsapp text-3xl text-white"></i>
+                    </div>
+                    <span class="text-sm text-brandOrange font-semibold uppercase tracking-wider mb-2">Atendimento Via WhatsApp</span>
+                    <span class="text-2xl font-bold text-white">(92) 98809-3401</span>
+                    <span class="mt-4 text-sm text-gray-400">Clique para enviar mensagem</span>
+                </a>
+
+                <!-- Email Contact -->
+                <a href="mailto:vendas@vianorterepres.com.br" class="bg-white/5 hover:bg-white/10 border border-white/10 hover:border-brandOrange/50 p-8 rounded-2xl flex flex-col items-center text-center transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-brandBlue-light border-2 border-brandOrange rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-envelope text-2xl text-brandOrange"></i>
+                    </div>
+                    <span class="text-sm text-brandOrange font-semibold uppercase tracking-wider mb-2">E-mail Comercial</span>
+                    <span class="text-lg font-bold text-white break-all">vendas@vianorterepres.com.br</span>
+                    <span class="mt-4 text-sm text-gray-400">Envie sua solicitação ou cotação</span>
                 </a>
 
                 <!-- Instagram Contact -->
-                <a href="https://www.instagram.com/vianorterep" target="_blank" class="bg-white/10 hover:bg-white/20 border border-white/20 p-6 rounded-2xl flex flex-col items-center min-w-[250px] transition-all duration-300">
-                    <i class="fa-brands fa-instagram text-4xl text-brandOrange mb-4"></i>
-                    <span class="text-sm text-gray-300 uppercase tracking-wider mb-1">Instagram</span>
-                    <span class="text-xl font-bold">@vianorterep</span>
+                <a href="https://www.instagram.com/vianorterep" target="_blank" class="bg-white/5 hover:bg-white/10 border border-white/10 hover:border-brandOrange/50 p-8 rounded-2xl flex flex-col items-center text-center transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-brands fa-instagram text-3xl text-white"></i>
+                    </div>
+                    <span class="text-sm text-brandOrange font-semibold uppercase tracking-wider mb-2">Siga nosso Instagram</span>
+                    <span class="text-2xl font-bold text-white">@vianorterep</span>
+                    <span class="mt-4 text-sm text-gray-400">Acompanhe as novidades</span>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-brandBlue-dark pt-12 pb-6 border-t border-white/5 mt-auto">
+    <footer class="bg-brandBlue-dark pt-16 pb-8 border-t border-white/5 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                
-                <div class="flex items-center gap-2 mb-4 md:mb-0">
-                    <i class="fa-solid fa-handshake text-brandOrange text-2xl"></i>
-                    <div class="flex flex-col">
-                        <span class="text-white font-extrabold text-xl tracking-tight leading-none">VIA<span class="text-brandOrange">NORTE</span></span>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+                <!-- Footer Logo -->
+                <div class="flex flex-col items-center md:items-start">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-handshake text-brandOrange text-3xl"></i>
+                        <div class="flex flex-col">
+                            <span class="text-white font-extrabold text-2xl tracking-tight leading-none">VIA<span class="text-brandOrange">NORTE</span></span>
+                        </div>
                     </div>
-                </div>
-
-                <div class="text-center md:text-right">
-                    <p class="text-gray-400 text-sm">
-                        &copy; <span id="year"></span> Via Norte Representações.<br>
-                        Confiança que movimenta negócios.
+                    <p class="text-gray-400 text-sm text-center md:text-left mt-2">
+                        Conectando a indústria ao varejo de peças automotivas com excelência, agilidade e confiança que movimenta negócios.
                     </p>
                 </div>
+
+                <!-- Footer Links -->
+                <div class="flex flex-col items-center md:items-start">
+                    <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Links Rápidos</h4>
+                    <ul class="space-y-2 text-center md:text-left">
+                        <li><a href="#home" class="text-gray-400 hover:text-brandOrange transition-colors">Início</a></li>
+                        <li><a href="#sobre" class="text-gray-400 hover:text-brandOrange transition-colors">Sobre a Empresa</a></li>
+                        <li><a href="#catalogos" class="text-gray-400 hover:text-brandOrange transition-colors">Ver Catálogos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Contact Info -->
+                <div class="flex flex-col items-center md:items-start">
+                    <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Contato</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="https://wa.me/5592988093401" target="_blank" class="text-gray-400 hover:text-brandOrange transition-colors flex items-center justify-center md:justify-start gap-2">
+                                <i class="fa-brands fa-whatsapp text-lg"></i> (92) 98809-3401
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:vendas@vianorterepres.com.br" class="text-gray-400 hover:text-brandOrange transition-colors flex items-center justify-center md:justify-start gap-2">
+                                <i class="fa-solid fa-envelope text-sm"></i> vendas@vianorterepres.com.br
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/vianorterep" target="_blank" class="text-gray-400 hover:text-brandOrange transition-colors flex items-center justify-center md:justify-start gap-2">
+                                <i class="fa-brands fa-instagram text-lg"></i> @vianorterep
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-center">
+                <p class="text-gray-500 text-sm">
+                    &copy; <span id="year"></span> Via Norte Representações. Todos os direitos reservados.
+                </p>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script>
-        // Atualiza o ano no rodapé
+        // Atualiza o ano no rodapé automaticamente
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Lógica do Menu Mobile
+        // Lógica do Menu Mobile Responsivo
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
 
@@ -323,12 +389,24 @@
             menu.classList.toggle('hidden');
         });
 
-        // Fechar menu ao clicar em um link (mobile)
+        // Fechar o menu mobile ao clicar em qualquer link dele
         const mobileLinks = menu.querySelectorAll('a');
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.add('hidden');
             });
+        });
+
+        // Efeito de background no header ao realizar o scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-lg');
+                header.style.backgroundColor = 'rgba(11, 27, 54, 0.98)';
+            } else {
+                header.classList.remove('shadow-lg');
+                header.style.backgroundColor = 'rgba(11, 27, 54, 0.95)';
+            }
         });
     </script>
 </body>
